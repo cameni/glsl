@@ -22,6 +22,5 @@ void main()
     vec3 d1 = m * p1;
     vec3 d2 = p1 * transpose(m);
 
-    retval = d1.x == d2.x && d1.y == d2.y && d1.z == d2.z
-        ? 1 : 0;
+    retval = all(equal(d1, d2)) ? 1 : 0;
 }
